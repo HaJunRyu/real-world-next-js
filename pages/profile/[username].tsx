@@ -1,33 +1,49 @@
-import Image from 'next/image';
 import React, { ReactElement } from 'react';
-import Navigator from 'src/components/common/Navigator';
+import Image from 'next/image';
 
 interface Props {}
 
-function Home({}: Props): ReactElement {
+function profile({}: Props): ReactElement {
   return (
-    <div className="home-page">
-      <Navigator></Navigator>
-      <div className="banner">
+    <div className="profile-page">
+      <div className="user-info">
         <div className="container">
-          <h1 className="logo-font">conduit</h1>
-          <p>A place to share your knowledge.</p>
+          <div className="row">
+            <div className="col-xs-12 col-md-10 offset-md-1">
+              <Image
+                src="http://i.imgur.com/Qr71crq.jpg"
+                className="user-img"
+                width={100}
+                height={100}
+                alt=""
+              />
+              <h4>Eric Simons</h4>
+              <p>
+                Cofounder @GoThinkster, lived in Aols HQ for a few months, kinda looks like Peeta
+                from the Hunger Games
+              </p>
+              <button className="btn btn-sm btn-outline-secondary action-btn">
+                <i className="ion-plus-round"></i>
+                &nbsp; Follow Eric Simons
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="container page">
+      <div className="container">
         <div className="row">
-          <div className="col-md-9">
-            <div className="feed-toggle">
+          <div className="col-xs-12 col-md-10 offset-md-1">
+            <div className="articles-toggle">
               <ul className="nav nav-pills outline-active">
                 <li className="nav-item">
-                  <a className="nav-link disabled" href="">
-                    Your Feed
+                  <a className="nav-link active" href="">
+                    My Articles
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" href="">
-                    Global Feed
+                  <a className="nav-link" href="">
+                    Favorited Articles
                   </a>
                 </li>
               </ul>
@@ -35,8 +51,8 @@ function Home({}: Props): ReactElement {
 
             <div className="article-preview">
               <div className="article-meta">
-                <a href="profile.html">
-                  <Image src="http://i.imgur.com/Qr71crq.jpg" alt="" width={32} height={32} />
+                <a href="">
+                  <Image src="http://i.imgur.com/Qr71crq.jpg" alt="" width={100} height={100} />
                 </a>
                 <div className="info">
                   <a href="" className="author">
@@ -57,8 +73,8 @@ function Home({}: Props): ReactElement {
 
             <div className="article-preview">
               <div className="article-meta">
-                <a href="profile.html">
-                  <Image src="http://i.imgur.com/N4VcUeJ.jpg" alt="" width={32} height={32} />
+                <a href="">
+                  <Image src="http://i.imgur.com/N4VcUeJ.jpg" alt="" width={100} height={100} />
                 </a>
                 <div className="info">
                   <a href="" className="author">
@@ -74,40 +90,11 @@ function Home({}: Props): ReactElement {
                 <h1>The song you wont ever stop singing. No matter how hard you try.</h1>
                 <p>This is the description for the post.</p>
                 <span>Read more...</span>
+                <ul className="tag-list">
+                  <li className="tag-default tag-pill tag-outline">Music</li>
+                  <li className="tag-default tag-pill tag-outline">Song</li>
+                </ul>
               </a>
-            </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="sidebar">
-              <p>Popular Tags</p>
-
-              <div className="tag-list">
-                <a href="" className="tag-pill tag-default">
-                  programming
-                </a>
-                <a href="" className="tag-pill tag-default">
-                  javascript
-                </a>
-                <a href="" className="tag-pill tag-default">
-                  emberjs
-                </a>
-                <a href="" className="tag-pill tag-default">
-                  angularjs
-                </a>
-                <a href="" className="tag-pill tag-default">
-                  react
-                </a>
-                <a href="" className="tag-pill tag-default">
-                  mean
-                </a>
-                <a href="" className="tag-pill tag-default">
-                  node
-                </a>
-                <a href="" className="tag-pill tag-default">
-                  rails
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -116,4 +103,4 @@ function Home({}: Props): ReactElement {
   );
 }
 
-export default Home;
+export default profile;
