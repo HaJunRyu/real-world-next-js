@@ -1,13 +1,11 @@
 import Image from 'next/image';
 import React, { ReactElement } from 'react';
-import Navigator from 'src/components/common/Navigator';
 
 interface Props {}
 
 function Home({}: Props): ReactElement {
   return (
     <div className="home-page">
-      <Navigator></Navigator>
       <div className="banner">
         <div className="container">
           <h1 className="logo-font">conduit</h1>
